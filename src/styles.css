@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #3a7bd5, #6dd5ed);
+}
+
+.calculator {
+    width: 100%;
+    max-width: 360px;
+    padding: 28px 24px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.calculator__title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.calculator__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.calculator__label {
+    font-size: 14px;
+    color: #555555;
+}
+
+.calculator__input {
+    margin-bottom: 8px;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.calculator__input:focus {
+    border-color: #3a7bd5;
+}
+
+.calculator__input--error {
+    border-color: #e74c3c;
+}
+
+.calculator__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.calculator__button {
+    padding: 14px 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3a7bd5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.calculator__button:hover {
+    background-color: #2d62ad;
+}
+
+.calculator__button:active {
+    transform: scale(0.95);
+}
+
+.calculator__clear {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #555555;
+    background-color: #f1f2f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calculator__clear:hover {
+    background-color: #dfe4ea;
+}
+
+.calculator__result {
+    min-height: 56px;
+    padding: 16px;
+    font-size: 20px;
+    text-align: center;
+    word-break: break-word;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.calculator__result--success {
+    font-weight: bold;
+    color: #27ae60;
+    background-color: #eafaf1;
+}
+
+.calculator__result--error {
+    font-size: 16px;
+    color: #c0392b;
+    background-color: #fdecea;
+}
